@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Application
+{% endblock %}
+
+{% block body %}
+        {{ first_name }} {{ last_name }}, thank you for applying for the {{ position }} position.
+        Your minimum salary requirement is ${{ salary }}.
+{% endblock %}

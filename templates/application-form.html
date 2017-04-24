@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Application Form {% endblock %}
+
+{% block body %}
+    <!-- <div class="row"> -->
+        <h1>Our Application</h1>
+
+        <p>This is some explanatory text.</p>
+
+    <form action="/application-success" method="POST">
+
+            <span>First Name:</span>
+            <input type="text" name="first">
+
+            <span>Last Name:</span>
+            <input type="text" name="last">
+
+            <span>Salary Required:</span>
+            <input name="salary_required">
+
+            <span>Job Desired:</span>
+            <select name="position">
+                {% for position in positions %}
+                    <option value="{{ position }}">{{ position }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" value="Apply">
+        </div>
+
+    </form>
+{% endblock %}
